@@ -28,7 +28,3 @@
 - [resources/items](./resources/items)：武器、被动与升级资源数据
 - [resources/waves](./resources/waves)：波次配置资源
 - [autoloads](./autoloads)：全局单例脚本，例如共享游戏状态与音频管理
-
-## 当前状态
-
-这个仓库目前仍处于持续迭代中的玩法原型阶段。部分系统已经可以从头到尾完整游玩，另外一些系统还在继续打磨和整理。
