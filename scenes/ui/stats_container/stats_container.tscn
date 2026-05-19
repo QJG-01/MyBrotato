@@ -1,0 +1,331 @@
+[gd_scene format=3 uid="uid://deu27vtp8futd"]
+
+[ext_resource type="Script" uid="uid://jeptdoe8cgk8" path="res://scenes/ui/stats_container/stats_container.gd" id="1_j1e6u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1e6u"]
+bg_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8315k"]
+bg_color = Color(0.039215688, 0.74509805, 0.7607843, 0.3137255)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_y4pj1"]
+font_size = 24
+
+[node name="StatsContainer" type="Panel" unique_id=888800895]
+custom_minimum_size = Vector2(480, 550)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_j1e6u")
+script = ExtResource("1_j1e6u")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1039047560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1147948735]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="StatsHealth" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1013550060]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsHealth" unique_id=1545087481]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "max hp:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsHealth" unique_id=1612698260]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2
+
+[node name="StatsHPRegen" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=219053911]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsHPRegen" unique_id=1886846944]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "hp regen:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="HPRegenLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsHPRegen" unique_id=1083112187]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2
+
+[node name="StatsLifeSteal" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1328842776]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsLifeSteal" unique_id=23950753]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "%life steal:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="LifeStealLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsLifeSteal" unique_id=1674453382]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2
+
+[node name="StatsDamage" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=955804750]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsDamage" unique_id=1337512736]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "damge:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="DamageLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsDamage" unique_id=1242773846]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2
+
+[node name="StatsLuck" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=302247312]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsLuck" unique_id=1472429391]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "luck:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="LuckLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsLuck" unique_id=255240318]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2
+
+[node name="StatsSpeed" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=478342000]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsSpeed" unique_id=1462289251]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "speed:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="SpeedLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsSpeed" unique_id=1004045445]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2
+
+[node name="StatsBlock" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1303718568]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsBlock" unique_id=7390667]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "%Block chance:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="BlockLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsBlock" unique_id=1700452409]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2
+
+[node name="StatsHarvesting" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1517256070]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8315k")
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/StatsHarvesting" unique_id=111796902]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -14.5
+offset_right = 100.0
+offset_bottom = 14.5
+grow_vertical = 2
+text = "harvesting:"
+label_settings = SubResource("LabelSettings_y4pj1")
+
+[node name="HarvestingLabel" type="Label" parent="MarginContainer/VBoxContainer/StatsHarvesting" unique_id=1854891898]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -14.5
+offset_right = -10.0
+offset_bottom = 14.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_y4pj1")
+horizontal_alignment = 2

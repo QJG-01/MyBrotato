@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dw5oeufaq18dm"]
+
+[ext_resource type="PackedScene" uid="uid://drjjmx7shlapk" path="res://scenes/unit/players/player_well_rounded.tscn" id="1_tex7i"]
+[ext_resource type="Texture2D" uid="uid://dmox6e28kf6ax" path="res://assets/sprites/Players/Player_4.png" id="2_lbt10"]
+[ext_resource type="Script" uid="uid://cje6eb73hh8qd" path="res://resources/units/unit_stats.gd" id="3_lbt10"]
+
+[sub_resource type="Resource" id="Resource_da4ie"]
+script = ExtResource("3_lbt10")
+name = "Bunny"
+icon = ExtResource("2_lbt10")
+health = 20
+health_increase_per_wave = 0.0
+damage = 5
+damage_increase_per_wave = 0.0
+speed = 325
+luch = 5.0
+block_chance = 3.0
+gold_drop = 0
+metadata/_custom_type_script = "uid://cje6eb73hh8qd"
+
+[node name="PlayerBunny" unique_id=986318553 instance=ExtResource("1_tex7i")]
+stats = SubResource("Resource_da4ie")
+
+[node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(439963002) index="2" unique_id=1059119693]
+texture = ExtResource("2_lbt10")

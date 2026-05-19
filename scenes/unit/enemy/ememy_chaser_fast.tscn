@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bsfs4kekslq7a"]
+
+[ext_resource type="PackedScene" uid="uid://g7of3srw3ah4" path="res://scenes/unit/enemy/ememy_chaser_slow.tscn" id="1_acii3"]
+[ext_resource type="Texture2D" uid="uid://c6vplmpl4q4jr" path="res://assets/sprites/Enemies/Enemy_3.png" id="2_hnx18"]
+[ext_resource type="Script" uid="uid://cje6eb73hh8qd" path="res://resources/units/unit_stats.gd" id="3_vx67n"]
+
+[sub_resource type="Resource" id="Resource_jr5pi"]
+script = ExtResource("3_vx67n")
+name = "Chaser Fast"
+type = 1
+icon = ExtResource("2_hnx18")
+health = 6
+health_increase_per_wave = 2.5
+damage = 1.5
+damage_increase_per_wave = 1.5
+speed = 350
+luch = 0.0
+block_chance = 5.0
+gold_drop = 2
+metadata/_custom_type_script = "uid://cje6eb73hh8qd"
+
+[node name="EmemyChaserFast" unique_id=26533177 instance=ExtResource("1_acii3")]
+stats = SubResource("Resource_jr5pi")
+
+[node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(439963002) index="1" unique_id=1059119693]
+texture = ExtResource("2_hnx18")

@@ -1,0 +1,22 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+.codex/
+
+# AI assistant / agent artifacts
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+findings.md
+progress.md
+task_plan.md
+.agents/
+.claude/
+
+# Local editor / MCP helper files
+.mcp.json
+.cursor/
+
+# Temporary files
+*.tmp
+tmp/

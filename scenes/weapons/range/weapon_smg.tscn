@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/weapons/weapon_base.tscn" id="1_base"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Weapons/Range/WeaponSMG.png" id="2_texture"]
+[ext_resource type="Script" path="res://scenes/weapons/range/range_behavior.gd" id="3_behavior"]
+
+[node name="WeaponSMG" unique_id=1955409196 instance=ExtResource("1_base")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=2038333624]
+position = Vector2(20, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_texture")
+
+[node name="Muzzle" type="Marker2D" parent="Sprite2D" index="0"]
+unique_name_in_owner = true
+position = Vector2(80, -13)
+
+[node name="WeaponBehavior" parent="." index="3" unique_id=310926569 node_paths=PackedStringArray("weapon")]
+script = ExtResource("3_behavior")
+weapon = NodePath("..")

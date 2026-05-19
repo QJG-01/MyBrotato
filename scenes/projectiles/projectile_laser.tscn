@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bquxwrs0yi0lv"]
+
+[ext_resource type="PackedScene" uid="uid://b7ly0wxamxdia" path="res://scenes/projectiles/projectile_pistol.tscn" id="1_kgo5h"]
+[ext_resource type="Texture2D" uid="uid://3c2kwaw7powj" path="res://assets/sprites/Projectiles/Projectile_3.png" id="2_kgo5h"]
+
+[node name="ProjectileLaser" unique_id=1775344097 instance=ExtResource("1_kgo5h")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=484625863]
+texture = ExtResource("2_kgo5h")
+
+[node name="HitboxComponent" parent="." index="1" unique_id=881270957]
+scale = Vector2(0.92000014, 0.92000014)
+
+[node name="CollisionShape2D" parent="HitboxComponent" index="0" unique_id=1175723316]
+position = Vector2(0, 0)
+scale = Vector2(1.1599996, 1.1599996)
+
+[node name="VisibleOnScreenEnabler2D" parent="." index="2" unique_id=55933269]
+position = Vector2(1, 0)

@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://drjjmx7shlapk"]
+
+[ext_resource type="PackedScene" uid="uid://bq5uvywdreie1" path="res://scenes/unit/unit.tscn" id="1_wkafa"]
+[ext_resource type="Script" uid="uid://30uu4sajd36h" path="res://scenes/unit/players/player.gd" id="2_xa7el"]
+[ext_resource type="Resource" uid="uid://4xvkq7pugx6y" path="res://resources/units/players/stats_player_well_rounded.tres" id="3_xa7el"]
+[ext_resource type="Script" uid="uid://du0xaq2k3mc3f" path="res://scenes/unit/players/trail.gd" id="4_0kki1"]
+[ext_resource type="Texture2D" uid="uid://cproxhccob85g" path="res://assets/sprites/Players/Player_1.png" id="5_ht2l1"]
+[ext_resource type="Script" uid="uid://b6sul7qxhskgc" path="res://scenes/unit/players/weapon_container.gd" id="6_viu20"]
+
+[sub_resource type="Curve" id="Curve_ht2l1"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ht2l1"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_viu20"]
+radius = 33.0
+
+[node name="PlayerWellRounded" unique_id=986318553 instance=ExtResource("1_wkafa")]
+collision_mask = 2
+script = ExtResource("2_xa7el")
+dash_duration = 0.4
+dash_speed_multi = 2.5
+dash_cooldown = 1.5
+stats = ExtResource("3_xa7el")
+
+[node name="Trail" type="Line2D" parent="Visuals" parent_id_path=PackedInt32Array(439963002) index="0" unique_id=1884930561 node_paths=PackedStringArray("player")]
+unique_name_in_owner = true
+top_level = true
+position = Vector2(0, -30)
+width = 50.0
+width_curve = SubResource("Curve_ht2l1")
+script = ExtResource("4_0kki1")
+player = NodePath("../..")
+
+[node name="Shadow" parent="Visuals" parent_id_path=PackedInt32Array(439963002) index="1" unique_id=991464916]
+z_index = 1
+
+[node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(439963002) index="2" unique_id=1059119693]
+z_index = 1
+texture = ExtResource("5_ht2l1")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1591940176]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+position = Vector2(0, -32)
+shape = SubResource("CircleShape2D_ht2l1")
+
+[node name="WeaponContainer" type="Node2D" parent="." index="3" unique_id=104513583]
+script = ExtResource("6_viu20")
+
+[node name="One" type="Node2D" parent="WeaponContainer" index="0" unique_id=1078144138]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="WeaponContainer/One" index="0" unique_id=1197557246]
+position = Vector2(0, -15)
+
+[node name="Two" type="Node2D" parent="WeaponContainer" index="1" unique_id=1910996115]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="WeaponContainer/Two" index="0" unique_id=99287958]
+position = Vector2(40, 20)
+
+[node name="Marker2D2" type="Marker2D" parent="WeaponContainer/Two" index="1" unique_id=1803714783]
+position = Vector2(-40, 20)
+
+[node name="Three" type="Node2D" parent="WeaponContainer" index="2" unique_id=485746717]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="WeaponContainer/Three" index="0" unique_id=50398518]
+position = Vector2(40, 20)
+
+[node name="Marker2D2" type="Marker2D" parent="WeaponContainer/Three" index="1" unique_id=1280681243]
+position = Vector2(-40, 20)
+
+[node name="Marker2D3" type="Marker2D" parent="WeaponContainer/Three" index="2" unique_id=752498862]
+position = Vector2(0, -115)
+
+[node name="Four" type="Node2D" parent="WeaponContainer" index="3" unique_id=699755599]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="WeaponContainer/Four" index="0" unique_id=616195011]
+position = Vector2(40, 20)
+
+[node name="Marker2D2" type="Marker2D" parent="WeaponContainer/Four" index="1" unique_id=1042620350]
+position = Vector2(-40, 20)
+
+[node name="Marker2D3" type="Marker2D" parent="WeaponContainer/Four" index="2" unique_id=1974537657]
+position = Vector2(40, -115)
+
+[node name="Marker2D4" type="Marker2D" parent="WeaponContainer/Four" index="3" unique_id=609286686]
+position = Vector2(-40, -115)
+
+[node name="Five" type="Node2D" parent="WeaponContainer" index="4" unique_id=1488608043]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="WeaponContainer/Five" index="0" unique_id=1319805969]
+position = Vector2(40, 20)
+
+[node name="Marker2D2" type="Marker2D" parent="WeaponContainer/Five" index="1" unique_id=669374896]
+position = Vector2(-40, 20)
+
+[node name="Marker2D3" type="Marker2D" parent="WeaponContainer/Five" index="2" unique_id=608024931]
+position = Vector2(60, -40)
+
+[node name="Marker2D4" type="Marker2D" parent="WeaponContainer/Five" index="3" unique_id=137440203]
+position = Vector2(-60, -40)
+
+[node name="Marker2D5" type="Marker2D" parent="WeaponContainer/Five" index="4" unique_id=2121177926]
+position = Vector2(0, -155)
+
+[node name="Six" type="Node2D" parent="WeaponContainer" index="5" unique_id=1690147830]
+visible = false
+
+[node name="Marker2D" type="Marker2D" parent="WeaponContainer/Six" index="0" unique_id=1303989062]
+position = Vector2(35, 20)
+
+[node name="Marker2D2" type="Marker2D" parent="WeaponContainer/Six" index="1" unique_id=237181364]
+position = Vector2(-35, 20)
+
+[node name="Marker2D3" type="Marker2D" parent="WeaponContainer/Six" index="2" unique_id=819825921]
+position = Vector2(35, -115)
+
+[node name="Marker2D4" type="Marker2D" parent="WeaponContainer/Six" index="3" unique_id=307940596]
+position = Vector2(-35, -115)
+
+[node name="Marker2D5" type="Marker2D" parent="WeaponContainer/Six" index="4" unique_id=1230135584]
+position = Vector2(60, -45)
+
+[node name="Marker2D6" type="Marker2D" parent="WeaponContainer/Six" index="5" unique_id=1228043801]
+position = Vector2(-60, -45)
+
+[node name="DashTimer" type="Timer" parent="." index="4" unique_id=949126983]
+one_shot = true
+
+[node name="DashCooldownTimer" type="Timer" parent="." index="5" unique_id=247521962]
+one_shot = true
+
+[node name="TrailTimer" type="Timer" parent="." index="6" unique_id=768145634]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="HurtboxComponent" parent="." index="7" unique_id=519452781]
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" index="0" unique_id=673953594]
+z_index = 1
+position = Vector2(0, -32)
+shape = SubResource("CircleShape2D_viu20")
+debug_color = Color(0.81514627, 0.4057553, 0.10783198, 0.41960785)
+
+[node name="HealthBar" parent="." index="9" unique_id=1987688523]
+back_color = Color(0.13725491, 0.019607844, 0.02745098, 1)
+fill_color = Color(1, 0.2901961, 0.45490196, 1)
+
+[node name="FlashTimer" parent="." index="10" unique_id=1140865912]
+wait_time = 0.2
+
+[node name="HPRegenTimer" type="Timer" parent="." index="11" unique_id=2042430398]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="TrailTimer" to="Visuals/Trail" method="_on_trail_timer_timeout"]
+[connection signal="on_damaged" from="HurtboxComponent" to="HealthComponent" method="_on_hurtbox_component_on_damaged"]
+[connection signal="timeout" from="HPRegenTimer" to="." method="_on_hp_regen_timer_timeout"]

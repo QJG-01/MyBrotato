@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://kov5xvluek83"]
+
+[ext_resource type="PackedScene" uid="uid://drjjmx7shlapk" path="res://scenes/unit/players/player_well_rounded.tscn" id="1_5054k"]
+[ext_resource type="Texture2D" uid="uid://dq63ocnu3lset" path="res://assets/sprites/Players/Player_3}.png" id="2_ii53f"]
+[ext_resource type="Script" uid="uid://cje6eb73hh8qd" path="res://resources/units/unit_stats.gd" id="3_ii53f"]
+
+[sub_resource type="Resource" id="Resource_e1phh"]
+script = ExtResource("3_ii53f")
+name = "Crazy"
+icon = ExtResource("2_ii53f")
+health = 15
+health_increase_per_wave = 0.0
+damage = 3
+damage_increase_per_wave = 0.0
+speed = 350
+luch = 5.0
+block_chance = 5.0
+gold_drop = 0
+metadata/_custom_type_script = "uid://cje6eb73hh8qd"
+
+[node name="PlayerCrazy" unique_id=986318553 instance=ExtResource("1_5054k")]
+stats = SubResource("Resource_e1phh")
+
+[node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(439963002) index="2" unique_id=1059119693]
+texture = ExtResource("2_ii53f")

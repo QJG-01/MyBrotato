@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="UnitStats" format=3 uid="uid://cs8day38wccuq"]
+
+[ext_resource type="Script" uid="uid://cje6eb73hh8qd" path="res://resources/units/unit_stats.gd" id="2_gj4xx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fm5ur"]
+load_path = "res://.godot/imported/Player_5.png-c384fe55bbfc04299fb09022f8cfe63a.ctex"
+
+[resource]
+script = ExtResource("2_gj4xx")
+name = "Knight"
+icon = SubResource("CompressedTexture2D_fm5ur")
+health = 30
+health_increase_per_wave = 0.0
+damage = 6
+damage_increase_per_wave = 0.0
+speed = 260
+block_chance = 10.0
+gold_drop = 0
+metadata/_custom_type_script = "uid://cje6eb73hh8qd"

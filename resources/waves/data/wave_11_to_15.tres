@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="WaveData" format=3 uid="uid://d1je2leo4pu75"]
+
+[ext_resource type="Script" uid="uid://bfwwlbmysyd45" path="res://resources/waves/wave_data.gd" id="1_wave_script"]
+[ext_resource type="Script" uid="uid://bh020nfmodpma" path="res://resources/waves/wave_unit_data.gd" id="2_unit_script"]
+[ext_resource type="PackedScene" uid="uid://cu6akevli12vv" path="res://scenes/unit/enemy/ememy_charger.tscn" id="enemy_charger"]
+[ext_resource type="PackedScene" uid="uid://bsfs4kekslq7a" path="res://scenes/unit/enemy/ememy_chaser_fast.tscn" id="enemy_fast"]
+[ext_resource type="PackedScene" uid="uid://lggga7ccdprk" path="res://scenes/unit/enemy/ememy_chaser_mid.tscn" id="enemy_mid"]
+[ext_resource type="PackedScene" uid="uid://dlovj0dx4np4b" path="res://scenes/unit/enemy/ememy_shooter.tscn" id="enemy_shooter"]
+[ext_resource type="PackedScene" uid="uid://g7of3srw3ah4" path="res://scenes/unit/enemy/ememy_chaser_slow.tscn" id="enemy_slow"]
+
+[sub_resource type="Resource" id="Resource_slow"]
+script = ExtResource("2_unit_script")
+unit_scene = ExtResource("enemy_slow")
+weight = 2
+metadata/_custom_type_script = "uid://bh020nfmodpma"
+
+[sub_resource type="Resource" id="Resource_mid"]
+script = ExtResource("2_unit_script")
+unit_scene = ExtResource("enemy_mid")
+weight = 4
+metadata/_custom_type_script = "uid://bh020nfmodpma"
+
+[sub_resource type="Resource" id="Resource_fast"]
+script = ExtResource("2_unit_script")
+unit_scene = ExtResource("enemy_fast")
+weight = 4
+metadata/_custom_type_script = "uid://bh020nfmodpma"
+
+[sub_resource type="Resource" id="Resource_charger"]
+script = ExtResource("2_unit_script")
+unit_scene = ExtResource("enemy_charger")
+weight = 3
+metadata/_custom_type_script = "uid://bh020nfmodpma"
+
+[sub_resource type="Resource" id="Resource_shooter"]
+script = ExtResource("2_unit_script")
+unit_scene = ExtResource("enemy_shooter")
+weight = 2
+metadata/_custom_type_script = "uid://bh020nfmodpma"
+
+[resource]
+script = ExtResource("1_wave_script")
+from = 11
+to = 15
+wave_time = 60
+units = Array[ExtResource("2_unit_script")]([SubResource("Resource_slow"), SubResource("Resource_mid"), SubResource("Resource_fast"), SubResource("Resource_charger"), SubResource("Resource_shooter")])
+min_spawn_time = 0.35
+max_spawn_time = 1.25
+metadata/_custom_type_script = "uid://bfwwlbmysyd45"

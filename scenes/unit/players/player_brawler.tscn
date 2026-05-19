@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dp522hjil87en"]
+
+[ext_resource type="PackedScene" uid="uid://drjjmx7shlapk" path="res://scenes/unit/players/player_well_rounded.tscn" id="1_t1ilm"]
+[ext_resource type="Script" uid="uid://cje6eb73hh8qd" path="res://resources/units/unit_stats.gd" id="2_k813p"]
+[ext_resource type="Texture2D" uid="uid://dpxw8tsbgrfse" path="res://assets/sprites/Players/Player_2.png" id="2_tvi6w"]
+
+[sub_resource type="Resource" id="Resource_tvi6w"]
+script = ExtResource("2_k813p")
+name = "Brawler"
+icon = ExtResource("2_tvi6w")
+health = 25
+health_increase_per_wave = 0.0
+damage = 4
+damage_increase_per_wave = 0.0
+speed = 270
+luch = 3.0
+block_chance = 5.0
+gold_drop = 0
+metadata/_custom_type_script = "uid://cje6eb73hh8qd"
+
+[node name="PlayerBrawler" unique_id=986318553 instance=ExtResource("1_t1ilm")]
+stats = SubResource("Resource_tvi6w")
+
+[node name="Sprite" parent="Visuals" parent_id_path=PackedInt32Array(439963002) index="2" unique_id=1059119693]
+texture = ExtResource("2_tvi6w")
