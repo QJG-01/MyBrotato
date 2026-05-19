@@ -1,34 +1,34 @@
 # MyBrotato
 
-`MyBrotato` is a Godot 4.7 top-down arena survival prototype inspired by Brotato. The current project already includes a playable combat loop, multiple enemy archetypes, a growing item pool, and upgrade/shop style progression systems.
+`MyBrotato` 是一个基于 Godot 4.7 开发的俯视角竞技场生存游戏原型，玩法灵感来自 Brotato。当前项目已经具备可游玩的核心战斗循环，包含多种敌人类型、逐步扩展的道具池，以及升级/商店式成长系统。
 
-## Current Features
+## 当前功能
 
-- Playable character scenes with movement, dash, health, and weapon slots
-- Multiple melee and ranged weapons with shared weapon behaviors and per-weapon stats
-- Enemy variants including chasers, chargers, and shooters
-- Projectile, collision, hitbox, hurtbox, knockback, and damage text systems
-- Coin drops and coin bag UI
-- Upgrade, item selection, shop, and stat display panels
-- Wave data resources covering waves 1 through 20
-- Spawn effects, floating text, shaders, and sound manager autoload support
+- 可操作角色，包含移动、冲刺、生命值和武器槽系统
+- 多种近战与远程武器，支持共享武器行为与独立武器数值
+- 多类敌人原型，包括追击型、冲锋型和射击型敌人
+- 投射物、碰撞、Hitbox、Hurtbox、击退与伤害数字系统
+- 金币掉落与金币背包界面
+- 升级、道具选择、商店和属性展示面板
+- 第 1 波到第 20 波的波次配置资源
+- 出生特效、飘字、着色器，以及声音管理自动加载支持
 
-## Controls
+## 操作方式
 
-- `WASD`: Move
-- `Space`: Dash
+- `WASD`：移动
+- `Space`：冲刺
 
-## Project Structure
+## 项目结构
 
-- [project.godot](./project.godot): Godot project entry
-- [scenes/arena](./scenes/arena): Main arena scene, camera, and spawning logic
-- [scenes/unit](./scenes/unit): Player and enemy units
-- [scenes/weapons](./scenes/weapons): Weapon scenes and behaviors
-- [scenes/ui](./scenes/ui): HUD, shop, upgrade, and card UI
-- [resources/items](./resources/items): Weapon, passive, and upgrade resource data
-- [resources/waves](./resources/waves): Wave configuration resources
-- [autoloads](./autoloads): Global singleton scripts such as shared game state and audio
+- [project.godot](./project.godot)：Godot 项目入口配置
+- [scenes/arena](./scenes/arena)：主战斗场景、相机与刷怪逻辑
+- [scenes/unit](./scenes/unit)：玩家与敌人单位
+- [scenes/weapons](./scenes/weapons)：武器场景与行为脚本
+- [scenes/ui](./scenes/ui)：HUD、商店、升级与卡牌界面
+- [resources/items](./resources/items)：武器、被动与升级资源数据
+- [resources/waves](./resources/waves)：波次配置资源
+- [autoloads](./autoloads)：全局单例脚本，例如共享游戏状态与音频管理
 
-## Current State
+## 当前状态
 
-This repository represents an actively evolving gameplay prototype. Some systems are already playable end to end, while others are still being iterated on and cleaned up.
+这个仓库目前仍处于持续迭代中的玩法原型阶段。部分系统已经可以从头到尾完整游玩，另外一些系统还在继续打磨和整理。
